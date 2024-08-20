@@ -20,15 +20,13 @@ class NumberdaysTest extends TestCase
            'name' => 'Frodo',
             'description' => 'Central Asian Shepherd Dog',
             'type' => 'Dog',
-            'birthday' => Carbon::createFromFormat('Y/m/d','2024/02/01'),
-            // otros campos necesarios para el modelo
+            'birthday' => Carbon::createFromFormat('Y/m/d','2024/02/01'),         
         ]);
 
         $mascota = PetWalk::create([
              'location' => 'Parque',
              'walk_date' => Carbon::createFromFormat('Y/m/d','2024/20/08'),
              'pet_id' => $mascota->id
-             // otros campos necesarios para el modelo
          ]);
 
          $dias = Mascota::getDays($mascota);
